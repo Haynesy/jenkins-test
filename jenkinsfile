@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    triggers {
+        pollSCM('* * * * *')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Complete!'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Building!'
+            }
+        }
+        
+        stage('Unit Testing') {
+            steps {
+                echo 'Unit Tests!'
+            }
+        }
+        
+        stage('Integration Testing') {
+            steps {
+                echo 'Unit Tests!'
+            }
+        }
+    }
+}
